@@ -58,14 +58,14 @@ for i in range(len(sentences)):
 model = Word2Vec(sentences, min_count=1) #if the word is present less than 1 we are going skip that word
 
 #find out the vocabulary
-words = model.wv.vocab
+words = model.wv.key_to_index
 
 
 #finding word Vectors
 vector = model.wv['war']
 
 #most similar words
-similar = model.wv.most_similar('vikram')
+similar = model.wv.most_similar('freedom')
 
 
 
